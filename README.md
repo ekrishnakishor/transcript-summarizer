@@ -96,8 +96,8 @@ To get started with this project, follow these steps:
           return true;
       }
   });
+ 
 
-<details>
   <summary><a href="#">Theory</a></summary>
   <p>
     This code provides a set of functions that work together to fetch the transcript of a YouTube video and return it to the caller. The getTranscript function takes a sendResponse callback function as an argument, which it calls with the transcript data when it's ready.
@@ -110,4 +110,4 @@ To get started with this project, follow these steps:
 
     Finally, the chrome.runtime.onMessage.addListener function listens for a message with type 'getTranscript' and calls the getTranscript function with a callback function to send the transcript data back to the caller.
   </p>
-</details>
+
