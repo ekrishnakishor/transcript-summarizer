@@ -1,0 +1,25 @@
+{
+    "name": "Youtube-Caption-Viewer",
+    "version": "1.0.0",
+    "description": "Get transcription of youtube videos.",
+    "manifest_version": 3,
+    "author": "B45i",
+    "permissions": ["tabs"],
+    "action": {
+        "default_title": "Youtube-Caption-Viewer",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/icon.png",
+            "32": "assets/icon.png",
+            "48": "assets/icon.png",
+            "128": "assets/icon.png"
+        }
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+            "js": ["content-script.js"]
+        }
+    ]
+}
