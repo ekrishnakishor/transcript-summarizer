@@ -1,4 +1,4 @@
-# Youtube-Caption-Viewer
+# Transcript Summarizer
 
 ![](https://img.shields.io/badge/Chrome-Extension-blue.svg) ![](https://img.shields.io/badge/Version-1.0.0-green.svg)
 
@@ -99,13 +99,18 @@ To get started with this project, follow these steps:
  
 
   
-    This code provides a set of functions that work together to fetch the transcript of a YouTube video and return it to the caller. The getTranscript function takes a sendResponse callback function as an argument, which it calls with the transcript data when it's ready.
+    This code provides a set of functions that work together to fetch the transcript of a YouTube video and 
+    return it to the caller. The getTranscript function takes a sendResponse callback function as an argument, 
+    which it calls with the transcript data when it's ready.
+    The fetchTranscript function is responsible for making a network request to the YouTube API to fetch the transcript data. 
+    It takes a videoId and an optional key parameter, which defaults to a hardcoded value if not provided.
 
-    The fetchTranscript function is responsible for making a network request to the YouTube API to fetch the transcript data. It takes a videoId and an optional key parameter, which defaults to a hardcoded value if not provided.
-
-    The extractTranscript function takes the raw response data from the YouTube API and extracts the transcript text from it. It uses a chain of optional chaining (?.) and nullish coalescing (??) operators to safely navigate through the response object and handle any missing or undefined values.
+    The extractTranscript function takes the raw response data from the YouTube API and extracts the transcript text from it. 
+    It uses a chain of optional chaining (?.) and nullish coalescing (??) operators to safely navigate through the response 
+    object and handle any missing or undefined values.
 
     The getVideoId function extracts the video ID from a YouTube video URL using a regular expression.
 
-    Finally, the chrome.runtime.onMessage.addListener function listens for a message with type 'getTranscript' and calls the getTranscript function with a callback function to send the transcript data back to the caller.
+    Finally, the chrome.runtime.onMessage.addListener function listens for a message with type 'getTranscript' and calls 
+    the getTranscript function with a callback function to send the transcript data back to the caller.
 
