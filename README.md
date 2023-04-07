@@ -96,3 +96,12 @@ To get started with this project, follow these steps:
           return true;
       }
   });
+
+<summary>Theory</summary>
+```
+This code provides a set of functions that work together to fetch the transcript of a YouTube video and return it to the caller. The getTranscript function takes a sendResponse callback function as an argument, which it calls with the transcript data when it's ready.
+
+The fetchTranscript function is responsible for making a network request to the YouTube API to fetch the transcript data. It takes a videoId and an optional key parameter, which defaults to a hardcoded value if not provided.
+
+The extractTranscript function takes the raw response data from the YouTube API and extracts the transcript text from it. It uses a chain of optional chaining (?.) and nullish coalescing (??) operators to safely navigate
+```
